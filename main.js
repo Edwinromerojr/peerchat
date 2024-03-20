@@ -1,3 +1,5 @@
+let APP_ID = "1cfcddb419384cc5b417ed14f38d8eda"
+
 let localStream;
 let remoteStream;
 let peerConnection;
