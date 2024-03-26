@@ -44,6 +44,7 @@ let init = async () => {
 
 let handleUserLeft = async (MemberId) => {
     document.getElementById('user-2').style.display = 'none'
+    document.getElementById('user-1').classList.remove('smallFrame')
 }
 
 let handleMessageFromPeer = async (message, MemberId) => {
@@ -75,6 +76,8 @@ let createPeerConnection = async (MemberId) => {
     remoteStream = new MediaStream()
     document.getElementById('user-2').srcObject = remoteStream
     document.getElementById('user-2').style.display = 'block'
+
+    document.getElementById('user-1').classList.add('smallFrame')
 
     if(!localStream){
         localStream = await navigator.mediaDevices.getUserMedia({video:true, audio:true})
